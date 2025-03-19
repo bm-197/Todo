@@ -1,0 +1,120 @@
+:root {
+  --font:  "Quicksand", sans-serif;
+  --radius: 20px;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: var(--font);
+}
+
+body {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add_task {
+  display: block;
+  vertical-align: middle;
+}
+
+.add_task input,
+.add_task input:focus {
+  outline: none;
+  border: none;
+  background-color: antiquewhite;
+  height: 2.5rem;
+  width: 20rem;
+  font-size: 1rem;
+  margin: 0;
+  border-radius: var(--radius) 0 0 var(--radius);
+  color: #1c1b1bd9;
+  padding: 0.8rem;
+}
+
+.add_task button {
+  border-radius: 0 var(--radius) var(--radius) 0;
+  height: 2.5rem;
+  width: 4rem;
+  margin: 0;
+  background-color: rgb(104, 147, 197);
+  color: white;
+  outline: none;
+  border: none;
+  font-size: large;
+  cursor: pointer;
+}
+
+
+.tasks {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 1rem;
+  background-color: antiquewhite;
+  margin-top: 1rem;
+  width: 24rem;
+  border-radius: var(--radius);
+}
+
+.tasks > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 10px;
+  background:linear-gradient(rgba(60, 58, 58, 0.211),rgba(95, 86, 86, 0.195)) bottom right no-repeat;
+  background-size:90% 1px;
+
+}
+.tasks > div > p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 15px;
+}
+.tasks > div > button {
+  margin-left: auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.tasks > div > input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(78, 76, 76, 0.873);
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.tasks > div > input[type="checkbox"]:checked::after {
+  content: '\2713';
+  font-size: 14px;
+  color: black;
+  position: absolute;
+  top: -1px;
+  left: 4px;
+}
