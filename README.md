@@ -13,7 +13,7 @@ This is a simple Todo app built with vanilla JavaScript. It allows users to add,
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/todo-app.git
+   git clone https://github.com/your-username/todo.git
    ```
 
 2. Open `index.html` in your browser to run the app.
